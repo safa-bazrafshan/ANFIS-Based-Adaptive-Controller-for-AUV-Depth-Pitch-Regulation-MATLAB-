@@ -68,3 +68,10 @@ Refer to the “User Guide” PDF for full instructions.
 ## Contact
 For questions or collaborations:  
 **safa.bazrafshan@gmail.com**
+
+## Note
+
+This is a demo version of the project.  
+Full version with all features, PDF documentation, and results is available for purchase.  
+For access to the full package, please contact: safa.bazrafshan@gmail.com
+
