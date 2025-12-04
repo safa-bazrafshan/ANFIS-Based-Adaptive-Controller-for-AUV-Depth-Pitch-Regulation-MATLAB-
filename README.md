@@ -1,109 +1,104 @@
-ANFIS-Based Adaptive Controller for AUV Depth & Pitch Regulation (MATLAB)
+🚀 ANFIS-Based Adaptive Controller for AUV Depth & Pitch (MATLAB)
 
-This repository provides a complete MATLAB implementation of an Adaptive Neuro-Fuzzy Inference System (ANFIS) trained using a Model Reference Adaptive Controller (MRAC) for regulating the depth and pitch of an Autonomous Underwater Vehicle (AUV).
+A clean and complete MATLAB implementation of an Adaptive Neuro-Fuzzy (ANFIS) controller trained using a Model Reference Adaptive Controller (MRAC) for depth and pitch regulation of an Autonomous Underwater Vehicle (AUV).
 
-The project includes a clean 4-state AUV model, data generation pipeline, controller training, simulation scripts, automatic result saving, and full documentation.
+This package includes a 4-state AUV model, ANFIS training pipeline, MRAC data generation, full simulation scripts, result saving, and professional documentation.
 
-🚀 Key Features
+⭐ Features
 
 4-state linear AUV dynamic model
 
-MRAC controller used as the “teacher” for ANFIS learning
+MRAC used as the “teacher” for training ANFIS
 
-Stable ANFIS training with normalized + noise-augmented inputs
+Stable learning with normalization + noise augmentation
 
-Fully automated training + simulation pipeline
+Fully automated training + simulation workflow
 
-Robust tracking performance for depth and pitch regulation
+Depth & pitch tracking with high robustness
 
-All results saved automatically
+All plots + data automatically saved
 
-Clean, modular MATLAB code
+Modular, readable MATLAB code
 
-Professional scientific report (PDF)
+Scientific report + user guide included
 
-User guide explaining parameters and customization
-
-📁 Project Structure
-
+📁 Repository Structure
 Project/
-│── params.m — System parameters
-│── run_MRAC.m — MRAC training data generator
-│── run_ANFIS.m — ANFIS training + simulation
+│── params.m              % System parameters
+│── run_MRAC.m            % Data generation using MRAC
+│── run_ANFIS.m           % ANFIS training + simulation
 │
 ├── Docs/
-│ ├── Scientific_Report_EN.pdf
-│ ├── User_Guide_EN.pdf
+│   ├── Scientific_Report_EN.pdf
+│   └── User_Guide_EN.pdf
 │
 └── Results/
-  └── ANFIS_4state/
-
-🔧 How to Run
+    └── ANFIS_4state/
+▶️ How to Run
 
 Open MATLAB
 
-Set the project directory as the working folder
+Set the project folder as your working directory
 
-Run the ANFIS controller:
+Run:
 
 run_ANFIS
 
-The script automatically:
 
-runs the MRAC simulation
+The script will automatically:
 
-generates training data
+run MRAC
 
-trains two ANFIS models (Fz & Mθ)
+generate training data
 
-performs the full AUV simulation
+train ANFIS (Fz & Mθ)
 
-saves all results and plots
+simulate AUV response
 
-📊 Output Plots
+save all results
 
-The simulation produces:
+📊 Outputs
 
-Depth tracking (reference vs. ANFIS)
+The simulation generates:
 
-Pitch tracking (reference vs. ANFIS)
+Depth tracking
 
-Control inputs (Vertical Force Fz, Pitch Moment Mθ)
+Pitch tracking
 
-Tracking error norm
+Control inputs (Fz, Mθ)
 
-Saved .mat file containing states, inputs, references, and FIS models
+Error norms
 
-All results appear in:
+Saved .mat model + data
+
+All stored in:
 
 Results/ANFIS_4state/
 
 ⚙️ Editable Parameters
 
-You can modify:
+AUV matrices (A, B)
 
-AUV matrices A and B
-
-Sampling time dt
+Sampling time
 
 Reference signals
 
-Training noise level
+Noise levels
 
-ANFIS structure (InitialFIS, Epochs, etc.)
+ANFIS structure
 
-Actuator limits (F_max, M_max)
+Actuator limits
 
-Total simulation duration
+Simulation duration
 
-All parameter descriptions are included in the User Guide PDF.
+More details in User_Guide_EN.pdf.
 
 📬 Contact
 
-For questions, improvements, or custom development requests:
+For questions, collaboration, or custom controller development:
 safa.bazrafshan@gmail.com
 
-🏷 License
+📄 License
 
-This project is intended for academic and research use.
+Academic & research use permitted.
 Commercial redistribution requires permission.
