@@ -1,102 +1,102 @@
-ANFIS-Based Adaptive Controller for AUV Depth & Pitch Regulation (MATLAB)
+# ANFIS-Based Adaptive Controller for AUV Depth & Pitch Regulation (MATLAB)
 
-This repository provides a complete MATLAB implementation of an Adaptive Neuro-Fuzzy Inference System (ANFIS) trained using a Model Reference Adaptive Controller (MRAC) for stabilizing and regulating the Depth and Pitch of an Underwater Vehicle (AUV).
+This repository provides a complete MATLAB implementation of an **Adaptive Neuro-Fuzzy Inference System (ANFIS)** trained using a **Model Reference Adaptive Controller (MRAC)** for regulating the **depth** and **pitch** of an Autonomous Underwater Vehicle (AUV).
 
-The project includes the full simulation environment, data generation pipeline, controller training, testing, and documentation.
+The project includes a clean 4-state AUV model, data generation pipeline, controller training, simulation scripts, result saving, and full documentation.
 
-🚀 Key Features
+---
 
-Full 4-state AUV dynamic model
+## 🚀 Key Features
 
-MRAC controller used as the “teacher” for ANFIS learning
+- 4-state linear AUV dynamic model  
+- MRAC controller used as the “teacher” for ANFIS learning  
+- Stable ANFIS training with normalized and noise-augmented inputs  
+- Fully automated training + simulation pipeline  
+- Robust tracking performance for depth and pitch  
+- All results saved automatically  
+- Clean and modular MATLAB code  
+- Professional scientific report (PDF)  
+- User guide for parameters and customization  
 
-Robust ANFIS training using noisy, normalized inputs
+---
 
-Stable and reproducible control performance
+## 📁 Project Structure
 
-Automatic result saving + plotting
-
-Easily customizable parameters
-
-Professional scientific documentation (PDF)
-
-User guide for modifying and extending the system
-
-📁 Repository Structure
 /Project
-│── params.m                % System parameters
-│── run_MRAC.m             % Teacher MRAC simulation
-│── run_ANFIS.m            % ANFIS training + control simulation
+│── params.m % System parameters
+│── run_MRAC.m % MRAC training data generator
+│── run_ANFIS.m % ANFIS training + simulation
 │── Docs/
-│     ├── Scientific_Report_EN.pdf
-│     ├── User_Guide_EN.pdf
+│ ├── Scientific_Report_EN.pdf
+│ ├── User_Guide_EN.pdf
 │── Results/
-      └── ANFIS_4state/
+└── ANFIS_4state/
 
-🔧 How to Run
+---
 
-Open MATLAB
+## 🔧 How to Run
 
-Set the project folder as the working directory
+1. Open MATLAB  
+2. Set the project directory as the working folder  
+3. Run the ANFIS controller:
 
-Run the ANFIS controller:
-
+```matlab
 run_ANFIS
+The script automatically:
 
+runs the MRAC simulation
 
-The script will automatically:
+generates training data
 
-simulate the MRAC model
+trains two ANFIS models (Fz & Mθ)
 
-generate training data
+performs the full AUV simulation
 
-train the ANFIS models
+saves all results and plots
 
-run the final ANFIS-controlled AUV
+📊 Output Plots
 
-save all results and plots
-
-📊 Simulation Outputs
+The simulation produces:
 
 Depth tracking (reference vs. ANFIS)
 
-Pitch tracking
+Pitch tracking (reference vs. ANFIS)
 
-Control inputs (Vertical force & Pitch moment)
+Control inputs (Vertical Force Fz, Pitch Moment Mθ)
 
-ANFIS tracking error
+Tracking error norm
 
-Saved FIS models
+Saved .mat file of states, inputs, references, and FIS models
 
-MAT results for post-processing
+All results appear in:
+/Results/ANFIS_4state/
 
 ⚙️ Editable Parameters
 
-You can easily modify:
+You can modify:
 
-AUV dynamics (A, B matrices)
+AUV matrices A, B
 
-Reference trajectories
+Sampling time dt
 
-Sampling time
+Reference signals
 
-ANFIS structure (rules, epochs, initial FIS type)
+Noise level during training
 
-Noise level
+ANFIS structure (InitialFIS, number of epochs, etc.)
 
-Normalization bounds
+Actuator limits (F_max, M_max)
 
-Actuator saturation limits
+Simulation time
 
-A detailed explanation is provided in the User Guide PDF.
+A full explanation is provided in the User Guide PDF.
 
-📬 Contact for Full Version / Collaboration
+📬 Contact
 
-To purchase the full package, request customization, or collaborate:
-
-📧 Email: safa.bazrafshan@gmail.com
+For questions, improvements, or custom development requests:
+safa.bazrafshan@gmail.com
 
 🏷 License
 
-This project is intended for academic and research purposes.
-Commercial redistribution requires written permission.
+This project is intended for academic and research use.
+Commercial redistribution requires permission.
