@@ -54,6 +54,8 @@ performs the full AUV simulation
 
 saves all results and plots
 
+---
+
 📊 Output Plots
 
 The simulation produces:
@@ -70,6 +72,8 @@ Saved .mat file of states, inputs, references, and FIS models
 
 All results appear in:
 /Results/ANFIS_4state/
+
+---
 
 ⚙️ Editable Parameters
 
@@ -91,10 +95,14 @@ Simulation time
 
 A full explanation is provided in the User Guide PDF.
 
+---
+
 📬 Contact
 
 For questions, improvements, or custom development requests:
 safa.bazrafshan@gmail.com
+
+---
 
 🏷 License
 
