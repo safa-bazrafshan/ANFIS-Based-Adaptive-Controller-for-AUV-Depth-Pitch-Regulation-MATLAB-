@@ -1,104 +1,57 @@
-🚀 ANFIS-Based Adaptive Controller for AUV Depth & Pitch (MATLAB)
+ANFIS-Based AUV Depth & Pitch Controller (MATLAB)
 
-A clean and complete MATLAB implementation of an Adaptive Neuro-Fuzzy (ANFIS) controller trained using a Model Reference Adaptive Controller (MRAC) for depth and pitch regulation of an Autonomous Underwater Vehicle (AUV).
+This repository contains MATLAB code for training and testing an ANFIS-based adaptive controller for regulating the depth and pitch of an Autonomous Underwater Vehicle (AUV).
+A 4-state linear AUV model is used, and training data is generated using an MRAC controller.
 
-This package includes a 4-state AUV model, ANFIS training pipeline, MRAC data generation, full simulation scripts, result saving, and professional documentation.
+Contents
 
-⭐ Features
+params.m
 
-4-state linear AUV dynamic model
+run_MRAC.m
 
-MRAC used as the “teacher” for training ANFIS
+run_ANFIS.m
 
-Stable learning with normalization + noise augmentation
+Docs (Scientific report and user guide)
 
-Fully automated training + simulation workflow
+Results (saved figures and data)
 
-Depth & pitch tracking with high robustness
+How to Run
 
-All plots + data automatically saved
+Open MATLAB.
 
-Modular, readable MATLAB code
+Set the project folder as the working directory.
 
-Scientific report + user guide included
-
-📁 Repository Structure
-Project/
-│── params.m              % System parameters
-│── run_MRAC.m            % Data generation using MRAC
-│── run_ANFIS.m           % ANFIS training + simulation
-│
-├── Docs/
-│   ├── Scientific_Report_EN.pdf
-│   └── User_Guide_EN.pdf
-│
-└── Results/
-    └── ANFIS_4state/
-▶️ How to Run
-
-Open MATLAB
-
-Set the project folder as your working directory
-
-Run:
+Run the script:
 
 run_ANFIS
 
 
-The script will automatically:
+The script automatically generates training data, trains the ANFIS models, runs the full simulation, and saves results.
 
-run MRAC
+Outputs
 
-generate training data
-
-train ANFIS (Fz & Mθ)
-
-simulate AUV response
-
-save all results
-
-📊 Outputs
-
-The simulation generates:
-
-Depth tracking
-
-Pitch tracking
-
-Control inputs (Fz, Mθ)
-
-Error norms
-
-Saved .mat model + data
-
-All stored in:
+Generated plots, trained ANFIS models, and simulation data are stored in:
 
 Results/ANFIS_4state/
 
-⚙️ Editable Parameters
+Editable Parameters
 
-AUV matrices (A, B)
+You can modify:
 
-Sampling time
+AUV model matrices
+
+Simulation time
 
 Reference signals
 
 Noise levels
 
-ANFIS structure
+ANFIS structure and training settings
 
 Actuator limits
 
-Simulation duration
+More details are available in the user guide (PDF).
 
-More details in User_Guide_EN.pdf.
+Contact
 
-📬 Contact
-
-For questions, collaboration, or custom controller development:
 safa.bazrafshan@gmail.com
-
-📄 License
-
-Academic & research use permitted.
-Commercial redistribution requires permission.
